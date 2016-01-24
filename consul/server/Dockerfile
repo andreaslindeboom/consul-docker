@@ -17,7 +17,7 @@ RUN apk add --no-cache wget ca-certificates && \
 
 ADD ./config /etc/consul/server
 
-EXPOSE 8300/tcp 8301 8302 8400/tcp 8500/tcp 8600/udp
+EXPOSE 8301 8500/tcp 8600/udp
 
 VOLUME /var/lib/consul
 
