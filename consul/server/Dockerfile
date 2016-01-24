@@ -15,8 +15,10 @@ RUN apk add --no-cache wget ca-certificates && \
     unzip $CONSUL_FILENAME -d /usr/local/bin && \
     rm consul_checksum ${CONSUL_FILENAME}
 
+ADD ./config /etc/consul/server
+
 EXPOSE 8300/tcp 8301 8302 8400/tcp 8500/tcp 8600/udp
 
 VOLUME /var/lib/consul
 
-ENTRYPOINT [ "/usr/local/bin/consul", "agent", "--server", "-data-dir=/var/lib/consul" ]
+ENTRYPOINT [ "/usr/local/bin/consul", "agent", "-config-dir=/etc/consul/server" ]
