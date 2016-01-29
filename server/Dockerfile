@@ -1,6 +1,6 @@
 FROM alpine:3.3
 
-ENV CONSUL_VERSION=0.6.3
+ENV CONSUL_VERSION=0.6.2
 ENV CONSUL_FILENAME=consul_${CONSUL_VERSION}_linux_amd64.zip
 ENV CONSUL_URL=https://releases.hashicorp.com/consul/${CONSUL_VERSION}/${CONSUL_FILENAME}
 ENV CONSUL_CHECKSUM_URL=https://releases.hashicorp.com/consul/${CONSUL_VERSION}/consul_${CONSUL_VERSION}_SHA256SUMS
