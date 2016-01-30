@@ -3,5 +3,6 @@
     "ui": true,
     "client_addr": "0.0.0.0",
     "data_dir": "/var/lib/consul",
-    "leave_on_terminate": true
+    "leave_on_terminate": true,
+    "rejoin_after_leave": true
 }
